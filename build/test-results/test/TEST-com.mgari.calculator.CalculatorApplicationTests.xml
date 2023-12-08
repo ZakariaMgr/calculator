@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mgari.calculator.CalculatorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-08T01:50:51" hostname="ubuntu" time="1.24">
+<testsuite name="com.mgari.calculator.CalculatorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-08T09:42:04" hostname="ubuntu" time="1.534">
   <properties/>
-  <testcase name="contextLoads()" classname="com.mgari.calculator.CalculatorApplicationTests" time="1.24"/>
-  <system-out><![CDATA[20:50:48.314 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mgari.calculator.CalculatorApplicationTests]: CalculatorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-20:50:48.492 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mgari.calculator.CalculatorApplication for test class com.mgari.calculator.CalculatorApplicationTests
+  <testcase name="contextLoads()" classname="com.mgari.calculator.CalculatorApplicationTests" time="1.534"/>
+  <system-out><![CDATA[04:41:59.766 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mgari.calculator.CalculatorApplicationTests]: CalculatorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:42:00.181 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mgari.calculator.CalculatorApplication for test class com.mgari.calculator.CalculatorApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,9 +13,9 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2023-12-07T20:50:49.161-05:00  INFO 25460 --- [    Test worker] c.m.c.CalculatorApplicationTests         : Starting CalculatorApplicationTests using Java 17.0.9 with PID 25460 (started by oem in /home/oem/Devops/calculator)
-2023-12-07T20:50:49.166-05:00  INFO 25460 --- [    Test worker] c.m.c.CalculatorApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2023-12-07T20:50:51.086-05:00  INFO 25460 --- [    Test worker] c.m.c.CalculatorApplicationTests         : Started CalculatorApplicationTests in 2.358 seconds (process running for 4.402)
+2023-12-08T04:42:01.461-05:00  INFO 31742 --- [    Test worker] c.m.c.CalculatorApplicationTests         : Starting CalculatorApplicationTests using Java 17.0.9 with PID 31742 (started by oem in /home/oem/Devops/calculator)
+2023-12-08T04:42:01.475-05:00  INFO 31742 --- [    Test worker] c.m.c.CalculatorApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T04:42:04.162-05:00  INFO 31742 --- [    Test worker] c.m.c.CalculatorApplicationTests         : Started CalculatorApplicationTests in 3.413 seconds (process running for 6.193)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
