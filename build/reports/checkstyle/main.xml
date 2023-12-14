@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/home/oem/Devops/calculator/src/main/java/com/mgari/calculator/CalculatorController.java">
+</file>
+<file name="/home/oem/Devops/calculator/src/main/java/com/mgari/calculator/CalculatorApplication.java">
+</file>
+<file name="/home/oem/Devops/calculator/src/main/java/com/mgari/calculator/Calculator.java">
+</file>
+</checkstyle>
