@@ -26,17 +26,17 @@ pipeline {
             }
         }
     }
+    stage("Test d'acceptation") {
+	steps {
+		sleep 60
+	sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
+	}
+	}
+	
 
     post {
-        always {
-            echo 'This will always run'
-        }
-        success {
-            echo 'This will run only if successful'
-        }
-        failure {
-            echo 'This will run only if failed'
-        }
-    }
+		always {
+		sh "docker stop calculator"
+	}	
 }
-
+}
