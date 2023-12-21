@@ -2,38 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage("Compilation") {
+        stage("Package") {
             steps {
-                sh "./gradlew compileJava"
+                sh "./gradlew build"
             }
         }
 
-        stage("test unitaire") {
+        stage("Docker build") {
             steps {
-                sh "./gradlew test"
+                sh "docker build -t calculator ."
             }
         }
 
-        stage("Analyse statistique du code") {
+        stage("Docker push") {
             steps {
-                sh "./gradlew checkstyleMain"
-                publishHTML(target: [
-                    reportDir: 'build/reports/checkstyle/',
-                    reportFiles: 'main.html',
-                    reportName: "Checkstyle Report"
-                ])
+                sh "docker push localhost:5000/calculator"
             }
         }
 
-        stage("Code coverage") {
+        stage("Déploiement sur staging") {
             steps {
-                sh "./gradlew jacocoTestReport"
-                publishHTML(target: [
-                    reportDir: 'build/reports/jacoco/test/html',
-                    reportFiles: 'index.html',
-                    reportName: "JaCoCo Report"
-                ])
-                sh "./gradlew jacocoTestCoverageVerification"
+                sh "docker run -d --rm -p 8765:8080 --name calculator localhost:5000/calculator"
             }
         }
     }
