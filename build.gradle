@@ -14,27 +14,34 @@ java {
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'junit:junit:4.12'
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0-M1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'io.cucumber:cucumber-java:7.15.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.15.0'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+tasks.register('acceptanceTest', Test) {
+    useJUnitPlatform()
+    include '**/acceptance/**'
+    systemProperties System.getProperties()
 }
+
+test {
+    exclude '**/acceptance/**'
+}
+
 jacocoTestCoverageVerification {
-	violationRules {
-		rule {
-			limit {
-				minimum = 0.2
-			}
-		}
-	}
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.2
+            }
+        }
+    }
 }
-
