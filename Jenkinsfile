@@ -28,11 +28,11 @@ pipeline {
 
         stage("Test d'acceptation") {
             steps {
-                sleep 60
+                sleep(time: 1, unit: 'MINUTES') // Attente d'une minute avant les tests d'acceptation
                 sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
             }
         }
-    }
+    
 
     post {
         always {
